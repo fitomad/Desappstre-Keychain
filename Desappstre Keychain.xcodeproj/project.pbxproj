@@ -13,7 +13,35 @@
 		912591DA2255321C006E5A28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912591D92255321C006E5A28 /* Assets.xcassets */; };
 		912591DD2255321C006E5A28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912591DB2255321C006E5A28 /* LaunchScreen.storyboard */; };
 		912591E822553872006E5A28 /* AppColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912591E722553872006E5A28 /* AppColors.xcassets */; };
+		912591F222553B88006E5A28 /* DesappstreSecureKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 912591F022553B88006E5A28 /* DesappstreSecureKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		912591F522553B88006E5A28 /* DesappstreSecureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912591EE22553B87006E5A28 /* DesappstreSecureKit.framework */; };
+		912591F622553B88006E5A28 /* DesappstreSecureKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 912591EE22553B87006E5A28 /* DesappstreSecureKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		912591FD22553BF3006E5A28 /* SecurityBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912591FC22553BF3006E5A28 /* SecurityBC.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		912591F322553B88006E5A28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 912591C722553217006E5A28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 912591ED22553B87006E5A28;
+			remoteInfo = DesappstreSecureKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		912591FA22553B88006E5A28 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				912591F622553B88006E5A28 /* DesappstreSecureKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		912591CF22553217006E5A28 /* Desappstre Keychain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desappstre Keychain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +52,22 @@
 		912591DC2255321C006E5A28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		912591DE2255321C006E5A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		912591E722553872006E5A28 /* AppColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppColors.xcassets; sourceTree = "<group>"; };
+		912591EE22553B87006E5A28 /* DesappstreSecureKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesappstreSecureKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		912591F022553B88006E5A28 /* DesappstreSecureKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesappstreSecureKit.h; sourceTree = "<group>"; };
+		912591F122553B88006E5A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912591FC22553BF3006E5A28 /* SecurityBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityBC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		912591CC22553217006E5A28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				912591F522553B88006E5A28 /* DesappstreSecureKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912591EB22553B87006E5A28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				912591D122553217006E5A28 /* Desappstre Keychain */,
+				912591EF22553B88006E5A28 /* DesappstreSecureKit */,
 				912591D022553217006E5A28 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				912591CF22553217006E5A28 /* Desappstre Keychain.app */,
+				912591EE22553B87006E5A28 /* DesappstreSecureKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,7 +133,36 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		912591EF22553B88006E5A28 /* DesappstreSecureKit */ = {
+			isa = PBXGroup;
+			children = (
+				912591FB22553BDC006E5A28 /* Controllers */,
+				912591F022553B88006E5A28 /* DesappstreSecureKit.h */,
+				912591F122553B88006E5A28 /* Info.plist */,
+			);
+			path = DesappstreSecureKit;
+			sourceTree = "<group>";
+		};
+		912591FB22553BDC006E5A28 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				912591FC22553BF3006E5A28 /* SecurityBC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		912591E922553B87006E5A28 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				912591F222553B88006E5A28 /* DesappstreSecureKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		912591CE22553217006E5A28 /* Desappstre Keychain */ = {
@@ -101,15 +172,35 @@
 				912591CB22553217006E5A28 /* Sources */,
 				912591CC22553217006E5A28 /* Frameworks */,
 				912591CD22553217006E5A28 /* Resources */,
+				912591FA22553B88006E5A28 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				912591F422553B88006E5A28 /* PBXTargetDependency */,
 			);
 			name = "Desappstre Keychain";
 			productName = "Desappstre Keychain";
 			productReference = 912591CF22553217006E5A28 /* Desappstre Keychain.app */;
 			productType = "com.apple.product-type.application";
+		};
+		912591ED22553B87006E5A28 /* DesappstreSecureKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 912591F722553B88006E5A28 /* Build configuration list for PBXNativeTarget "DesappstreSecureKit" */;
+			buildPhases = (
+				912591E922553B87006E5A28 /* Headers */,
+				912591EA22553B87006E5A28 /* Sources */,
+				912591EB22553B87006E5A28 /* Frameworks */,
+				912591EC22553B87006E5A28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesappstreSecureKit;
+			productName = DesappstreSecureKit;
+			productReference = 912591EE22553B87006E5A28 /* DesappstreSecureKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -123,6 +214,10 @@
 				TargetAttributes = {
 					912591CE22553217006E5A28 = {
 						CreatedOnToolsVersion = 10.2;
+					};
+					912591ED22553B87006E5A28 = {
+						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -140,6 +235,7 @@
 			projectRoot = "";
 			targets = (
 				912591CE22553217006E5A28 /* Desappstre Keychain */,
+				912591ED22553B87006E5A28 /* DesappstreSecureKit */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +252,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		912591EC22553B87006E5A28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -168,7 +271,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		912591EA22553B87006E5A28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				912591FD22553BF3006E5A28 /* SecurityBC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		912591F422553B88006E5A28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 912591ED22553B87006E5A28 /* DesappstreSecureKit */;
+			targetProxy = 912591F322553B88006E5A28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		912591D622553217006E5A28 /* Main.storyboard */ = {
@@ -309,6 +428,7 @@
 		912591E22255321C006E5A28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KQUX9WVW3M;
@@ -327,6 +447,7 @@
 		912591E32255321C006E5A28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KQUX9WVW3M;
@@ -339,6 +460,65 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		912591F822553B88006E5A28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KQUX9WVW3M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DesappstreSecureKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.desappstre.DesappstreSecureKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		912591F922553B88006E5A28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KQUX9WVW3M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DesappstreSecureKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.desappstre.DesappstreSecureKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -359,6 +539,15 @@
 			buildConfigurations = (
 				912591E22255321C006E5A28 /* Debug */,
 				912591E32255321C006E5A28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		912591F722553B88006E5A28 /* Build configuration list for PBXNativeTarget "DesappstreSecureKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				912591F822553B88006E5A28 /* Debug */,
+				912591F922553B88006E5A28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
