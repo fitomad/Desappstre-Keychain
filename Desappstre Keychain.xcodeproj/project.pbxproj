@@ -17,6 +17,9 @@
 		912591F522553B88006E5A28 /* DesappstreSecureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912591EE22553B87006E5A28 /* DesappstreSecureKit.framework */; };
 		912591F622553B88006E5A28 /* DesappstreSecureKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 912591EE22553B87006E5A28 /* DesappstreSecureKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		912591FD22553BF3006E5A28 /* SecurityBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912591FC22553BF3006E5A28 /* SecurityBC.swift */; };
+		916B01D6225546A600BBE4A6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B01D5225546A600BBE4A6 /* User.swift */; };
+		916B01D92255476300BBE4A6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916B01D82255476300BBE4A6 /* Security.framework */; };
+		916B01DB22554B6700BBE4A6 /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B01DA22554B6700BBE4A6 /* KeychainError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		912591F022553B88006E5A28 /* DesappstreSecureKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesappstreSecureKit.h; sourceTree = "<group>"; };
 		912591F122553B88006E5A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		912591FC22553BF3006E5A28 /* SecurityBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityBC.swift; sourceTree = "<group>"; };
+		916B01D5225546A600BBE4A6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		916B01D82255476300BBE4A6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		916B01DA22554B6700BBE4A6 /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				916B01D92255476300BBE4A6 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,7 @@
 				912591D122553217006E5A28 /* Desappstre Keychain */,
 				912591EF22553B88006E5A28 /* DesappstreSecureKit */,
 				912591D022553217006E5A28 /* Products */,
+				916B01D72255476200BBE4A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +144,7 @@
 		912591EF22553B88006E5A28 /* DesappstreSecureKit */ = {
 			isa = PBXGroup;
 			children = (
+				916B01D42255468E00BBE4A6 /* Entities */,
 				912591FB22553BDC006E5A28 /* Controllers */,
 				912591F022553B88006E5A28 /* DesappstreSecureKit.h */,
 				912591F122553B88006E5A28 /* Info.plist */,
@@ -149,6 +158,23 @@
 				912591FC22553BF3006E5A28 /* SecurityBC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		916B01D42255468E00BBE4A6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				916B01D5225546A600BBE4A6 /* User.swift */,
+				916B01DA22554B6700BBE4A6 /* KeychainError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		916B01D72255476200BBE4A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				916B01D82255476300BBE4A6 /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				916B01D6225546A600BBE4A6 /* User.swift in Sources */,
+				916B01DB22554B6700BBE4A6 /* KeychainError.swift in Sources */,
 				912591FD22553BF3006E5A28 /* SecurityBC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
