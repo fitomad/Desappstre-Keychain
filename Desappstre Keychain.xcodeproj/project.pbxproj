@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		912591D322553217006E5A28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912591D222553217006E5A28 /* AppDelegate.swift */; };
-		912591D522553217006E5A28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912591D422553217006E5A28 /* ViewController.swift */; };
+		912591D522553217006E5A28 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912591D422553217006E5A28 /* LoginViewController.swift */; };
 		912591D822553217006E5A28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912591D622553217006E5A28 /* Main.storyboard */; };
 		912591DA2255321C006E5A28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912591D92255321C006E5A28 /* Assets.xcassets */; };
 		912591DD2255321C006E5A28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912591DB2255321C006E5A28 /* LaunchScreen.storyboard */; };
+		912591E822553872006E5A28 /* AppColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912591E722553872006E5A28 /* AppColors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		912591CF22553217006E5A28 /* Desappstre Keychain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desappstre Keychain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		912591D222553217006E5A28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		912591D422553217006E5A28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		912591D422553217006E5A28 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		912591D722553217006E5A28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		912591D92255321C006E5A28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		912591DC2255321C006E5A28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		912591DE2255321C006E5A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912591E722553872006E5A28 /* AppColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppColors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		912591D122553217006E5A28 /* Desappstre Keychain */ = {
 			isa = PBXGroup;
 			children = (
-				912591D222553217006E5A28 /* AppDelegate.swift */,
-				912591D422553217006E5A28 /* ViewController.swift */,
-				912591D622553217006E5A28 /* Main.storyboard */,
-				912591D92255321C006E5A28 /* Assets.xcassets */,
-				912591DB2255321C006E5A28 /* LaunchScreen.storyboard */,
 				912591DE2255321C006E5A28 /* Info.plist */,
+				912591D222553217006E5A28 /* AppDelegate.swift */,
+				912591E62255325B006E5A28 /* Views */,
+				912591E52255324C006E5A28 /* Resources */,
+				912591E422553233006E5A28 /* Controllers */,
 			);
 			path = "Desappstre Keychain";
+			sourceTree = "<group>";
+		};
+		912591E422553233006E5A28 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				912591D422553217006E5A28 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		912591E52255324C006E5A28 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				912591D92255321C006E5A28 /* Assets.xcassets */,
+				912591E722553872006E5A28 /* AppColors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		912591E62255325B006E5A28 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				912591DB2255321C006E5A28 /* LaunchScreen.storyboard */,
+				912591D622553217006E5A28 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				912591DD2255321C006E5A28 /* LaunchScreen.storyboard in Resources */,
+				912591E822553872006E5A28 /* AppColors.xcassets in Resources */,
 				912591DA2255321C006E5A28 /* Assets.xcassets in Resources */,
 				912591D822553217006E5A28 /* Main.storyboard in Resources */,
 			);
@@ -135,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				912591D522553217006E5A28 /* ViewController.swift in Sources */,
+				912591D522553217006E5A28 /* LoginViewController.swift in Sources */,
 				912591D322553217006E5A28 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
