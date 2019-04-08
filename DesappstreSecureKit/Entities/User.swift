@@ -24,3 +24,16 @@ public struct User
         self.password = password
     }
 }
+
+//
+// MARK: - CustomStringConvertible Protocol
+//
+
+extension User: CustomStringConvertible
+{
+    ///
+    public var description: String
+    {
+        return "El usuario \(self.name) tiene la clave \(self.password)"
+    }
+}

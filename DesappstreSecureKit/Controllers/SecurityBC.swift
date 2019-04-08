@@ -11,10 +11,23 @@ import Security
 
 public class SecurityBC
 {
-    public func fetchUser(_ user: User) throws -> User
+    ///
+    public let serviceName: String
+    
+    /**
+ 
+    */
+    public init()
+    {
+        self.serviceName = "The Shows"
+    }
+    
+    public func fetchUser(_ user: User) -> Result<User, KeychainError>
     {
         let query: [String: Any] = [
-            kSecClass as String: kSecClassInternetPassword,
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String : self.serviceName,
+            kSecAttrAccount as String: user.name,
             kSecMatchLimit as String: kSecMatchLimitOne,
             kSecReturnAttributes as String: true,
             kSecReturnData as String: true
@@ -25,7 +38,8 @@ public class SecurityBC
         
         if status == errSecItemNotFound
         {
-            throw KeychainError.passwordNotFound
+            return Result.failure(KeychainError.passwordNotFound)
+            //throw KeychainError.passwordNotFound
         }
         
         if status == errSecSuccess
@@ -36,19 +50,20 @@ public class SecurityBC
                   let account = existingItem[kSecAttrAccount as String] as? String
             else
             {
-                    throw KeychainError.malformedData
+                return Result.failure(KeychainError.malformedData)
             }
             
             let user = User(named: account, withPassword: password)
             
-            return user
+            return Result.success(user)
             
         }
         else
         {
-            throw KeychainError.unknown(status: status)
+            return Result.failure(KeychainError.unknown(status: status))
         }
     }
+    
     /**
  
     */
@@ -60,7 +75,8 @@ public class SecurityBC
         }
         
         let query: [String: Any] = [
-            kSecClass as String: kSecClassInternetPassword,
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: self.serviceName,
             kSecAttrAccount as String: user.name,
             kSecValueData as String: passwordData
         ]
@@ -71,5 +87,77 @@ public class SecurityBC
         {
             throw KeychainError.unknown(status: status)
         }
+    }
+    
+    public func updateSecureUser(_ user: User) throws -> Void
+    {
+        guard let passwordData = user.password.data(using: .utf8) else
+        {
+            return
+        }
+        
+        // Filtro para encontrar el registro
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String : self.serviceName,
+            kSecAttrAccount as String: user.name
+        ]
+        
+        // La clave que queremos actualizar
+        let fields: [String: Any] = [
+            kSecAttrAccount as String: user.name,
+            kSecValueData as String: passwordData
+        ]
+        
+        let status = SecItemUpdate(query as CFDictionary, fields as CFDictionary)
+        
+        if status != errSecSuccess
+        {
+            throw KeychainError.unknown(status: status)
+        }
+    }
+    
+    /**
+ 
+    */
+    public func deleteUser(_ user: User) throws -> Void
+    {
+        // Filtro para encontrar el registro
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String : self.serviceName,
+            kSecAttrAccount as String: user.name
+        ]
+        
+        let status = SecItemDelete(query as CFDictionary)
+        
+        if status != errSecSuccess
+        {
+            throw KeychainError.unknown(status: status)
+        }
+    }
+    
+    /**
+ 
+    */
+    public func existsUser(_ user: User) -> Bool
+    {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String : self.serviceName,
+            kSecAttrAccount as String: user.name,
+            kSecMatchLimit as String: kSecMatchLimitOne,
+            kSecReturnAttributes as String: false,
+            kSecReturnData as String: false
+        ]
+        
+        let status = SecItemCopyMatching(query as CFDictionary, nil)
+        
+        if status == errSecItemNotFound
+        {
+            return false
+        }
+        
+        return true
     }
 }
