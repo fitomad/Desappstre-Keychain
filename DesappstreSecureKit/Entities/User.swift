@@ -11,9 +11,9 @@ import Foundation
 public struct User
 {
     ///
-    public var name: String
+    public private(set) var name: String
     ///
-    public var password: String
+    public private(set) var password: String
     
     /**
  
